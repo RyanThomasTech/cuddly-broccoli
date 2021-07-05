@@ -1,3 +1,5 @@
 # Personal Website
 
 It's been a while since I've put my personal website up because I got frustrated about my lack of aestheticism. I'll start working on that again. Those files will live here.
+
+I've decided I'm going to host multiple versions of my "website" since everyone I've talked to has had opinions on how and where I should set it up. It seems like a hassle to update multiple versions of it just to prove that I know different technologies, so I've decided to automate the process. I will run multiple instances of my website, each one will have its files in a different folder of this repository. On each service I host the website on, I will also run a shell script periodically via cron that checks this github repo to see if its respective folder has received a commit since the last time it checked. If so, it will pull the files down from GitHub and place them on the service in question. That way, I only need to push website changes to this GitHub repo and deployment of the sites will handle themselves.
