@@ -4,6 +4,22 @@ body {
 }
 
 .grid-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "main sidebar";
+    column-gap: 10px;
+
     background-color: white;
 }
 
+#main-container{
+    grid-area: main;
+    background-color: grey;
+}
+
+#sidebar-container{
+    grid-area: sidebar;
+    background-color: silver;
+}
