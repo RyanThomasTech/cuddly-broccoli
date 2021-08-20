@@ -1,25 +1,53 @@
-body {
-    font-size: 18px;
-    background-color: powderblue;
+body{
+  background-color: powderblue;
+  font-size: 20px;
+  margin: auto;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "main sidebar";
-    column-gap: 10px;
-
-    background-color: white;
+nav{
+  font-size: 22px;
+  text-decoration: none;
 }
 
-#main-container{
-    grid-area: main;
-    background-color: grey;
+nav>ul{
+  list-style: none;
+  margin: 0;
 }
 
-#sidebar-container{
-    grid-area: sidebar;
-    background-color: silver;
+nav a{
+  text-decoration: none;
+}
+
+.sidebar{
+  font-size: 16px;
+  margin: auto 20px;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 20px repeat(10, 1fr) 20px;
+  grid-template-rows: 40px 1fr;
+  column-gap: 10px;
+}
+
+.header{
+  background-color: teal;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.main-container{
+  background-color: white;
+  grid-column: 3 / span 6;
+  
+  padding: 0px 10px;
+}
+
+.sidebar-container{
+  background-color: ivory;
+  grid-column: 9 / span 3;
+}
+
+#profile-window{
+  align-self: start;
 }
