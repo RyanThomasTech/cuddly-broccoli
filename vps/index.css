@@ -1,53 +1,67 @@
 body{
-  background-color: powderblue;
-  font-size: 20px;
-  margin: auto;
+    background-color: powderblue;
+    font-size: 20px;
+    margin: auto;
 }
 
 nav{
-  font-size: 22px;
-  text-decoration: none;
+    font-size: 22px;
+    text-decoration: none;
 }
 
 nav>ul{
-  list-style: none;
-  margin: 0;
+    list-style: none;
+    margin: 0;
+}
+
+nav>ul>li{
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    float: left;
 }
 
 nav a{
-  text-decoration: none;
-}
-
-.sidebar{
-  font-size: 16px;
-  margin: auto 20px;
+    color: white;
+    text-decoration: none;
 }
 
 .wrapper{
-  display: grid;
-  grid-template-columns: 20px repeat(10, 1fr) 20px;
-  grid-template-rows: 40px 1fr;
-  column-gap: 10px;
+    display: grid;
+    grid-template-columns: 20px repeat(10, 1fr) 20px;
+    grid-template-rows: minmax(10px, auto) 1fr;
+    column-gap: 10px;
 }
 
 .header{
-  background-color: teal;
-  grid-column: 1 / -1;
-  grid-row: 1;
+    background-color: teal;
+    grid-column: 1 / -1;
+    grid-row: 1;
 }
 
 .main-container{
-  background-color: white;
-  grid-column: 3 / span 6;
-  
-  padding: 0px 10px;
+    background-color: white;
+    grid-column: 3 / span 6;
+    
+    padding: 0px 10px;
 }
 
 .sidebar-container{
-  background-color: ivory;
-  grid-column: 9 / span 3;
+    background-color: inherit;
+    font-size: 18px;
+    grid-column: 9 / span 3;
+    align-self: flex-start;
+    margin: -5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
 }
 
-#profile-window{
-  align-self: start;
+.sidebar-content{
+    border-radius:10px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 5px 0px;
+    max-width: 20em;
 }
